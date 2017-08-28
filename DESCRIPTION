@@ -1,0 +1,9 @@
+Package: Tides
+Version: 2.0
+Title: Quasi-Periodic Time Series Characteristics 
+Author: Tom Cox <tom.cox@uantwerp.be>, Lennert Schepers <lennert.schepers@uantwerp.be>
+Maintainer: Tom Cox <tom.cox@uantwerp.be>
+Description: Calculate Characteristics of Quasi-Periodic Time Series, e.g. Estuarine Water Levels.
+License: GPL
+LazyData: yes
+RoxygenNote: 6.0.1
