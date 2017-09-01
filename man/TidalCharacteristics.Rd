@@ -38,7 +38,7 @@
 \author{Tom Cox <tom.cox@uantwerp.be>, Lennert Schepers <lennert.schepers@uantwerp.be>}
 \keyword{utilities}
 \examples{
-TC <- TidalCharacteristics(waterlevels, filtconst=100,hoffset=5)
+TC <- TidalCharacteristics(waterlevels, filtconst=10,hoffset=1)
 TC
 plot(TC)
 summary(TC)

@@ -7,6 +7,8 @@
 #' 
 #' @param x Tides object (e.g. the result of \code{\link{TidalCharacteristics}})
 #' @author {Lennert Schepers <Lennert.Schepers@uantwerp.be>, Tom Cox <tom.cox@uantwerp.be>}
+#' @export summary.Tides
+#' 
 #' @return 
 #' A list containing: 
 #' \itemize{
