@@ -5,11 +5,6 @@ gapsts <- function(ts,            	# array of times, consisting of different con
 )
 {
   
-  if (!inherits(ts,"POSIXt")){
-    timediffs <- ts[1:(length(ts)-1)] - ts[2:(length(ts))]
-  } else {
-    timediffs <- difftime(ts[1:(length(ts)-1)], ts[2:(length(ts))],units=unit)
-  }
   
   if (!any(timediffs < - dtMax)) return(NULL)
   #Select gaps > dtMax in a timeseries ts
