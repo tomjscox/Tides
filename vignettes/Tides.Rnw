@@ -31,7 +31,7 @@ Figure \ref{Fig1} shows a typical water level time series, recorded in 2007 in t
 \begin{center}
 <<label=TideFig1,fig=TRUE,echo=FALSE, width=12, height=6>>=
 
-plot(waterlevels$time,waterlevels$h,ylab="water level [cmTAW]", xlab="time", type="l") # changed units to cm TAW instead of mTAW
+plot(waterlevels$time,waterlevels$h,ylab="water level [cmTAW]", xlab="time", type="l", cex.lab=1.5, cex.axis=1.5, lwd=2) # changed units to cm TAW instead of mTAW
 lines(waterlevels$time,waterlevels$h0,col="grey")
 
 
@@ -82,7 +82,9 @@ wssub <- subset(waterlevels,time>date1&time<date2)
 HLsub <- subset(TCwl$HL,time>date1&time<date2)
 Hsub <- subset(HLsub,HL=="H")
 # as.POSIXct(diff(Hsub$time))
-plot(TCwl$h$time,TCwl$h$h,ylab="water level [cmTAW]", xlab="time", type="l",xlim=c(date1,date2),ylim=c(280,360),axes=F) # cm!
+plot(TCwl$h$time,TCwl$h$h,ylab="water level [cmTAW]", xlab="time", 
+     type="l",xlim=c(date1,date2),ylim=c(280,360),axes=F, 
+     cex.lab=1.5, cex.axis=1.5, lwd=2) # cm!
 axis(2)
 days <- as.POSIXct(strptime(paste("2007-03-",1:31),format="%F"))
 axis.POSIXct(1,waterlevels$time,format="%a",at=days)
@@ -193,8 +195,6 @@ Warning message:
 In gapsts(wet$time, dtMax, unit = unit, shiftbegin = TRUE) :
   First data point is beginning of gap. To shift t0, dt is estimated from next continuous series
 \end{verbatim}
-\textcolor{green}{ADD some explanation about the warning message??}
-
 
 The resulting object is of class \texttt{Tides}, for which a simple plotting method exist. 
 
@@ -207,7 +207,7 @@ The resulting plot is shown in figure \ref{Fig3}. Mark that no maximum is genera
 \begin{center}
 <<label=TideFig3,fig=TRUE,echo=FALSE, width=12, height=6>>=
 
-plot(TidalCharacteristics(waterlevels, hoffset=3))
+plot(TidalCharacteristics(waterlevels, hoffset=3), cex.lab=1.5, cex.axis=1.5, lwd=2)
 
 @
 \end{center}
