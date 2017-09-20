@@ -143,7 +143,8 @@ As an additional feature, the function also works on time series containing gaps
 \texttt{TidalCharacteristics()} in fact returns an object of class \texttt{Tides}, with an associated simple plotting method. See examples. 
 \begin{Usage}
 \begin{verbatim}TidalCharacteristics(h,h0 = h$h0,T2 = 5*60*60, hoffset = 0, filtconst = 1, 
-                     dtMax = 15,unit = "mins", Tavg = 12.4*60 ) 
+                     dtMax = 15,unit = "mins", Tavg = 12.4*60,
+                     removegaps = c("All", "Split", "None")) 
 TC <- TidalCharacteristics(h,...)\end{verbatim}
 \end{Usage}
 \begin{Arguments}
@@ -152,6 +153,7 @@ TC <- TidalCharacteristics(h,...)\end{verbatim}
 \item[\code{dtMax}] Maximum accepted time interval in a continuous series. Bigger time intervals are considered to be gaps
 \item[\code{unit}] Unit of dtMax, Tavg
 \item[\code{Tavg}] Average time difference between consecutive maxima in the time series, used to calculate inundation frequency.
+\item[\code{removegaps}] Method to remove gaps in time series from inundation times and dry times
 \end{ldescription}
 \end{Arguments}
 \begin{Value}

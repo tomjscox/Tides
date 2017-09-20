@@ -25,7 +25,20 @@ TidalCharacteristics(h, h0 = h$h0, T2 = 5 * 60 * 60, hoffset = 0,
 
 \item{Tavg}{Average period of time series}
 
-\item{removegaps}{Method to remove gaps in time series from inundation times and dry times}
+\item{removegaps}{Method to remove gaps in time series from inundation times and dry times. See \code{\link{RemoveGaps}}}
+}
+\value{
+An object of class \code{Tides}, i.e. a list containing:
+\itemize{
+ \item{HL}{Data frame with extrema}
+ \item{h }{original water level data frame with additional attributes}
+ \item{gaps}{a data frame containing start and end times of gaps in the series}
+ \item{IF}{inundation frequency of the reference level}
+ \item{ITs}{inundation times at the reference level}
+ \item{DTs}{dry times at the reference level}
+ \item{h0}{reference level}
+ \item{N}{Total number of cycles in time span}
+}
 }
 \description{
 Calculates the characteristics of observed tidal water levels. Wrapper of the functions \code{\link{extrema}}, \code{\link{IT}} and \code{\link{IF}}. Also works on time series with gaps.
@@ -35,6 +48,9 @@ TC <- TidalCharacteristics(waterlevels, filtconst=10,hoffset=1)
  TC
  plot(TC)
  summary(TC)
+}
+\seealso{
+\code{\link{extrema}}, \code{\link{IT}}, \code{\link{plot.Tides}}
 }
 \author{
 Tom Cox <tom.cox@uantwerp.be>, Lennert Schepers <lennert.schepers@uantwerp.be>

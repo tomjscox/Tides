@@ -1,8 +1,9 @@
-#' @title Remove list of gaps from list of intervals 
+#' @title Remove gaps from intervals 
+#' @description Check whether a set of intervals (ivals) contains gaps (given as a second set of intervals). If so, either remove or split the original intervals.
 #' @name RemoveGaps
 #' @param gaps Dataframe generated with \code{\link{gapsts}} containing gaps in waterlevel time series
 #' @param ivals Data frame of intervals that have to be corrected for gaps (typically dry times DTS or inundation times ITs)
-#' @param method Method to remove gaps. "All": every interval containing (part of) a gap is removed. "Split": intervals are split into smaller intervals before and after the gap 
+#' @param method Method to remove gaps. "All": every interval containing (part of) a gap is removed. "Split": intervals are split into smaller intervals before and after the gap. "None" nothing is done 
 #' @export RemoveGaps
 #' 
 

@@ -11,8 +11,8 @@
 #' @param dtMax Maximum accepted time interval in a continuous series. Bigger time intervals are considered to be gaps
 #' @param unit Unit of dtMax, Tavg
 #' @param Tavg Average period of time series
-#' @param removegaps Method to remove gaps in time series from inundation times and dry times
-#' @value An object of class \code{Tides}, i.e. a list containing:
+#' @param removegaps Method to remove gaps in time series from inundation times and dry times. See \code{\link{RemoveGaps}}
+#' @return An object of class \code{Tides}, i.e. a list containing:
 #' \itemize{
 #'  \item{HL}{Data frame with extrema}
 #'  \item{h }{original water level data frame with additional attributes}
@@ -23,7 +23,7 @@
 #'  \item{h0}{reference level}
 #'  \item{N}{Total number of cycles in time span}
 #' }
-#' @seealso \code{\link{extrema}}, \code{\link{IT}}, \code{\link{plot.Tides}
+#' @seealso \code{\link{extrema}}, \code{\link{IT}}, \code{\link{plot.Tides}}
 #' @author Tom Cox <tom.cox@uantwerp.be>, Lennert Schepers <lennert.schepers@uantwerp.be>
 #' @keywords utilities
 #' @examples 

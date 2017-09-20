@@ -4,10 +4,12 @@
 \alias{summary.Tides}
 \title{Summary of tidal characteristics}
 \usage{
-\method{summary}{Tides}(x)
+\method{summary}{Tides}(object, ...)
 }
 \arguments{
-\item{x}{Tides object (e.g. the result of \code{\link{TidalCharacteristics}})}
+\item{object}{Tides object (e.g. the result of \code{\link{TidalCharacteristics}})}
+
+\item{...}{Not used (Added for S3 method compatibility)}
 }
 \value{
 A list containing: 

@@ -5,7 +5,8 @@
 #' 
 # #' @usage S3 method for class 'Tides'
 #' 
-#' @param x Tides object (e.g. the result of \code{\link{TidalCharacteristics}})
+#' @param object Tides object (e.g. the result of \code{\link{TidalCharacteristics}})
+#' @param ... Not used (Added for S3 method compatibility)
 #' @author {Lennert Schepers <Lennert.Schepers@uantwerp.be>, Tom Cox <tom.cox@uantwerp.be>}
 #' @export summary.Tides
 #' 
@@ -44,8 +45,8 @@
 #' \item{DPsum:}{ DTTsum/TSsum # proportion of total time dry (without gaps, and also tidal phases before and after gap are not included)}
 #' }
 
-summary.Tides<- function(x){
-  
+summary.Tides<- function(object, ...){
+  x <- object   # internal alias
   nTCsum <- x$Ncycles # number of tidal cycles # updated method: see TidalCharacteristics()
   nTCFsum <- x$Nfullcycles
   if (is.null(x$DTs$dt)) {

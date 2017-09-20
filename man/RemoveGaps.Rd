@@ -2,7 +2,7 @@
 % Please edit documentation in R/RemoveGaps.R
 \name{RemoveGaps}
 \alias{RemoveGaps}
-\title{Remove list of gaps from list of intervals}
+\title{Remove gaps from intervals}
 \usage{
 RemoveGaps(gaps, ivals, method = c("All", "Split"))
 }
@@ -11,5 +11,8 @@ RemoveGaps(gaps, ivals, method = c("All", "Split"))
 
 \item{ivals}{Data frame of intervals that have to be corrected for gaps (typically dry times DTS or inundation times ITs)}
 
-\item{method}{Method to remove gaps. "All": every interval containing (part of) a gap is removed. "Split": intervals are split into smaller intervals before and after the gap}
+\item{method}{Method to remove gaps. "All": every interval containing (part of) a gap is removed. "Split": intervals are split into smaller intervals before and after the gap. "None" nothing is done}
+}
+\description{
+Check whether a set of intervals (ivals) contains gaps (given as a second set of intervals). If so, either remove or split the original intervals.
 }
