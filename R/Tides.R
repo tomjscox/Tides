@@ -90,9 +90,11 @@ if (!is.null(DTs)) DTs$N <- tij$N[match(DTs$t1,tij$time)] # DTs$N = tidal phase 
 #} 
 
 if (!is.null(gaps)) {
-  ITs <- RemoveGaps(gaps, ivals=ITs, method=removegaps)
-  DTs <- RemoveGaps(gaps, ivals=DTs, method=removegaps)
-      
+  ITs_nogaps <- RemoveGaps(gaps, ivals=ITs, method=removegaps)
+  ITs <- cbind(ITs_nogaps, ITs[match(ITs_nogaps$t1, ITs$t1), c("n", "dt", "N")])
+  DTs_nogaps <- RemoveGaps(gaps, ivals=DTs, method=removegaps)
+  DTs <- cbind(DTs_nogaps, DTs[match(DTs_nogaps$t1, DTs$t1), c("n", "dt", "N")])
+  
 } 
 
 
